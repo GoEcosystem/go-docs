@@ -14,6 +14,10 @@ Welcome to the GoEcosystem documentation hub. This site contains comprehensive d
 - [Style Guide](STYLE_GUIDE.md) - Coding standards and practices
 - [Architecture](ARCHITECTURE.md) - Design principles and architectural patterns
 
+## Development Guides
+
+- [GitHub Pages Best Practices](pages/github_pages_best_practices.md) - Workflows and solutions for GitHub Pages deployment
+
 ## Projects
 
 GoEcosystem includes several projects:
