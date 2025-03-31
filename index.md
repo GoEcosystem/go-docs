@@ -31,6 +31,7 @@ GoEcosystem includes several projects:
 ### Applications & Tools
 
 - [go-web-scraper](https://github.com/GoEcosystem/go-web-scraper) - Comprehensive web scraper with database integration and web interface
+  - [Documentation](https://goecosystem.github.io/go-web-scraper/) - Feature overview, API docs, and architecture
 
 ### Documentation & Learning
 
@@ -46,5 +47,7 @@ Our flagship web scraper demonstrates Go's capabilities for concurrent programmi
 - Pagination support for articles and products
 - Export to JSON and CSV formats
 - Ethical scraping with user agent rotation
+
+Visit the [go-web-scraper documentation](https://goecosystem.github.io/go-web-scraper/) for detailed information about the project, API reference, and architecture overview.
 
 Visit the [main organization page](https://goecosystem.github.io/) to learn more about all GoEcosystem projects.
