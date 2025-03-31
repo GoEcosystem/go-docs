@@ -1,3 +1,9 @@
+---
+layout: page
+title: Architecture
+nav_order: 5
+---
+
 # GoEcosystem Architecture
 
 This document outlines the overall architecture and design principles for GoEcosystem projects.

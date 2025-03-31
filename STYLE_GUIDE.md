@@ -1,3 +1,9 @@
+---
+layout: page
+title: Style Guide
+nav_order: 4
+---
+
 # GoEcosystem Style Guide
 
 This document outlines the coding standards and style guidelines for GoEcosystem projects.

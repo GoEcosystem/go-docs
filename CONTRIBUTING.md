@@ -1,3 +1,9 @@
+---
+layout: page
+title: Contributing Guidelines
+nav_order: 2
+---
+
 # Contributing to GoEcosystem
 
 Thank you for considering contributing to GoEcosystem!

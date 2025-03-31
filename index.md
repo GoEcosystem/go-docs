@@ -1,3 +1,10 @@
+---
+layout: home
+title: GoEcosystem Documentation
+nav_order: 1
+permalink: /
+---
+
 # GoEcosystem Documentation
 
 Welcome to the GoEcosystem documentation hub. This repository contains organization-wide documentation and guidelines for all GoEcosystem projects.
