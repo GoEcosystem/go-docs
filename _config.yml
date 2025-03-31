@@ -1,15 +1,20 @@
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-relative-links
+
 title: GoEcosystem Documentation
-description: Documentation for the GoEcosystem Organization
-theme: just-the-docs
+description: Organization-wide documentation and guidelines for GoEcosystem projects
+show_downloads: false
 
-aux_links:
-  "GoEcosystem on GitHub":
-    - "https://github.com/GoEcosystem"
-    
-heading_anchors: true
+# Enable GitHub Pages to render Markdown files
+relative_links:
+  enabled: true
+  collections: true
 
-# Search settings
-search_enabled: true
-
-# Footer content
-footer_content: "Copyright &copy; 2025 GoEcosystem. Distributed under the <a href=\"https://github.com/GoEcosystem/go-docs/blob/main/LICENSE\">MIT license.</a>"
+include:
+  - README.md
+  - CONTRIBUTING.md
+  - CODE_OF_CONDUCT.md
+  - STYLE_GUIDE.md
+  - ARCHITECTURE.md

@@ -1,47 +1,46 @@
 ---
-layout: home
+layout: default
 title: GoEcosystem Documentation
-nav_order: 1
-permalink: /
 ---
 
 # GoEcosystem Documentation
 
-Welcome to the GoEcosystem documentation hub. This repository contains organization-wide documentation and guidelines for all GoEcosystem projects.
+Welcome to the GoEcosystem documentation hub. This site contains comprehensive documentation and guidelines for all GoEcosystem projects.
 
-## About GoEcosystem
+## Core Documentation
 
-GoEcosystem is a comprehensive collection of Go applications, libraries, and tools designed to work together and showcase Go development best practices.
+- [Contributing Guidelines](CONTRIBUTING.md) - How to contribute to GoEcosystem projects
+- [Code of Conduct](CODE_OF_CONDUCT.md) - Community standards and expectations
+- [Style Guide](STYLE_GUIDE.md) - Coding standards and practices
+- [Architecture](ARCHITECTURE.md) - Design principles and architectural patterns
 
-## Key Documents
+## Projects
 
-- [Contributing Guidelines](CONTRIBUTING.md)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Style Guide](STYLE_GUIDE.md)
-- [Architecture](ARCHITECTURE.md)
+GoEcosystem includes several projects:
 
-## Repositories
+### Templates & Infrastructure
 
-### Templates
-- [go-template](https://github.com/GoEcosystem/go-template) - Standard Go project template
-- [go-library-template](https://github.com/GoEcosystem/go-library-template) - Template for Go libraries
+- [go-template](https://github.com/GoEcosystem/go-template) - Standard Go project template with proper directory structure
+- [go-library-template](https://github.com/GoEcosystem/go-library-template) - Template for creating reusable Go libraries
+- [go-utils](https://github.com/GoEcosystem/go-utils) - Shared utilities for HTTP, database, logging, and configuration
 
-### Core Infrastructure
-- [go-utils](https://github.com/GoEcosystem/go-utils) - Shared utilities
-- [go-docs](https://github.com/GoEcosystem/go-docs) - Organization-wide documentation
+### Applications & Tools
 
-### Applications
-- [webscraper](https://github.com/GoEcosystem/webscraper) - Web scraping application
+- [go-web-scraper](https://github.com/GoEcosystem/go-web-scraper) - Comprehensive web scraper with database integration and web interface
 
-## Getting Started
+### Documentation & Learning
 
-To start contributing to GoEcosystem:
+- [go-cheatsheets](https://goecosystem.github.io/go-cheatsheets/) - Quick reference guides for Go programming
 
-1. Read the [Contributing Guidelines](CONTRIBUTING.md)
-2. Check out the [Style Guide](STYLE_GUIDE.md)
-3. Understand our [Architecture](ARCHITECTURE.md)
-4. Fork a repository and start contributing!
+## Featured Project: Go Web Scraper
 
-## License
+Our flagship web scraper demonstrates Go's capabilities for concurrent programming, database integration, and web development. Key features include:
 
-All GoEcosystem projects are licensed under the MIT License unless otherwise specified.
+- Concurrent web scraping with rate limiting
+- SQLite database integration
+- Web interface with Bootstrap styling
+- Pagination support for articles and products
+- Export to JSON and CSV formats
+- Ethical scraping with user agent rotation
+
+Visit the [main organization page](https://goecosystem.github.io/) to learn more about all GoEcosystem projects.
