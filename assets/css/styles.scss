@@ -1,57 +1,379 @@
----
----
-
 @charset "utf-8";
 
-$primary: #00ADD8;
-$accent: #00FF41;
-$dark: #0D1117;
-$text: #E5E7EB;
-$muted: #A3A3A3;
+// Go Brand Colors
+$primary: #00ADD8;       // Go Blue
+$secondary: #5DC9E2;     // Light Blue
+$accent: #2DBE60;        // Green
+$dark: #1E293B;          // Dark Background
+$light-dark: #293548;    // Lighter Dark Background
+$text: #E5E7EB;          // Light Text
+$muted: #A3A3A3;         // Muted Text
+$border: rgba(255, 255, 255, 0.1);
 
+// Layout
+$max-width: 1200px;
+$content-width: 900px;
+
+// Base Styles
 body {
   font-family: 'Inter', sans-serif;
   color: $text;
   background-color: $dark;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 a {
-  color: $accent;
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
   &:hover {
-    color: lighten($accent, 10%);
+    color: lighten($primary, 10%);
+    text-decoration: underline;
   }
 }
 
-.terminal-header {
-  background-color: #1E1E1E;
-  border-radius: 8px 8px 0 0;
+h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1rem;
+  color: $primary;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
+h1 {
+  font-size: 2.5rem;
+  border-bottom: 1px solid $border;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin: 0 0 1.5rem;
+}
+
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: $light-dark;
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1rem;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid $primary;
+  background-color: $light-dark;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Container
+.site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Header
+.site-header {
+  background-color: $light-dark;
+  border-bottom: 1px solid $border;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  color: $text;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: none;
+    color: $text;
+  }
+  
+  .go-logo {
+    fill: $primary;
+    margin-right: 0.5rem;
+  }
+  
+  .site-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  
+  .nav-link {
+    color: $text;
+    display: flex;
+    align-items: center;
+    
+    i {
+      margin-right: 0.5rem;
+    }
+    
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+// Hero Section
 .hero-section {
   background-color: $dark;
   padding: 4rem 2rem;
   text-align: center;
+  border-bottom: 1px solid $border;
 }
 
-.main-content {
-  background-color: $dark;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.hero-content {
+  max-width: $content-width;
+  margin: 0 auto;
   
-  h1, h2, h3 {
-    color: $primary;
+  h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: $text;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: $muted;
+    font-weight: 400;
   }
 }
 
-.matrix-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  background-color: $light-dark;
+  color: $text;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  
+  i {
+    margin-right: 0.5rem;
+  }
+  
+  &:hover {
+    background-color: lighten($light-dark, 5%);
+    text-decoration: none;
+  }
+  
+  &.primary-btn {
+    background-color: $primary;
+    
+    &:hover {
+      background-color: darken($primary, 5%);
+    }
+  }
+}
+
+// Main Content
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+}
+
+.content-wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  background-color: $light-dark;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+// TOC (Table of Contents)
+.toc {
+  background-color: $dark;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.toc-title {
+  margin-top: 0;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.toc-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  
+  li {
+    margin-bottom: 0.5rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  a {
+    color: $text;
+    text-decoration: none;
+    
+    &:hover {
+      color: $primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Feature List
+.feature-list {
+  background-color: $dark;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    
+    i {
+      color: $accent;
+      margin-right: 0.75rem;
+    }
+  }
+}
+
+// Syntax Highlighting
+pre.highlight {
+  background-color: $dark;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  
+  code {
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+// Footer
+.site-footer {
+  background-color: $light-dark;
+  border-top: 1px solid $border;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  max-width: $max-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-owner {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  margin-bottom: 1rem;
+  
+  a {
+    color: $text;
+    margin: 0 0.5rem;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.footer-colophon {
+  color: $muted;
+  font-size: 0.875rem;
+}
+
+// Responsive Adjustments
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-wrapper {
+    padding: 1.5rem;
+  }
 }
