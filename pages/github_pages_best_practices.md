@@ -79,7 +79,7 @@ A typical structure for a GitHub Pages site with Jekyll:
 │   └── container.html
 ├── assets/
 │   └── css/
-│       └── styles.scss
+│       └── style.scss
 ├── _config.yml
 ├── Gemfile
 ├── README.md
@@ -161,7 +161,7 @@ jobs:
 ### Creating a Custom Theme
 
 1. Create a `_layouts/default.html` file to override the theme's default layout
-2. Create an `assets/css/styles.scss` file for custom styling (note that Jekyll requires empty front matter at the top):
+2. Create an `assets/css/style.scss` file for custom styling (note that Jekyll requires empty front matter at the top):
 
 ```scss
 ---
