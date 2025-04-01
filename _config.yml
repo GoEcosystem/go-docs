@@ -1,17 +1,27 @@
-remote_theme: pages-themes/cayman@v0.2.0
+remote_theme: 
 plugins:
-  - jekyll-remote-theme
   - jekyll-relative-links
   - jekyll-seo-tag
 
+# Site configuration
 title: GoEcosystem Documentation
 description: Organization-wide documentation and guidelines for GoEcosystem projects
 show_downloads: false
 go_logo_enabled: true
 show_hero: true
+theme_mode: dark # or light
 
 # GitHub repository
 repository: GoEcosystem/go-docs
+
+# Theme colors
+theme_colors:
+  primary: "#00ADD8"    # Go blue
+  secondary: "#5DC9E2"  # Light blue
+  accent: "#00FF41"     # Matrix green
+  dark: "#0D1117"       # Near black
+  darker: "#070A0F"     # Darkest background
+  code_bg: "#1A1E26"    # Dark code background
 
 # Navigation links
 nav_links:
