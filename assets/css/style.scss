@@ -1,0 +1,233 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  --primary-color: #00ADD8; /* Go blue */
+  --secondary-color: #5DC9E2;
+  --dark-color: #0D1117;
+  --light-color: #F8F9FA;
+  --code-bg: #1F2937;
+  --code-color: #E5E7EB;
+}
+
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* Override Cayman theme with our modern Go-branded styling */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
+  padding: 3rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiLz48ZmVTcGVjdWxhckxpZ2h0aW5nIGluPSJub2lzZSIgc3VyZmFjZVNjYWxlPSIxMCIgc3BlY3VsYXJDb25zdGFudD0iMC4xIiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmdDb2xvcj0iI2ZmZmZmZiIgcmVzdWx0PSJzcGVjdWxhciIvPjxmZUNvbXBvc2l0ZSBpbj0ibm9pc2UiIGluMj0ic3BlY3VsYXIiIG9wZXJhdG9yPSJhcml0aG1ldGljIiBrMT0iMCIgazI9IjEiIGszPSIxIiBrND0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4xNSIvPjwvc3ZnPg==');
+  opacity: 0.3;
+  z-index: 0;
+}
+
+.page-header .project-name,
+.page-header .project-tagline {
+  position: relative;
+  z-index: 1;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-tagline {
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.main-content h1, 
+.main-content h2, 
+.main-content h3, 
+.main-content h4, 
+.main-content h5, 
+.main-content h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content h1 {
+  font-size: 2.2rem;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 0.3rem;
+}
+
+.main-content h2 {
+  font-size: 1.8rem;
+}
+
+.main-content h3 {
+  font-size: 1.5rem;
+}
+
+.main-content h4 {
+  font-size: 1.2rem;
+}
+
+.main-content code {
+  font-family: 'JetBrains Mono', monospace;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  background-color: rgba(0, 173, 216, 0.1);
+  color: var(--primary-color);
+}
+
+.main-content pre {
+  background-color: var(--code-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-content pre > code {
+  background-color: transparent;
+  color: var(--code-color);
+  padding: 0;
+}
+
+.main-content blockquote {
+  border-left: 0.3rem solid var(--secondary-color);
+  background-color: rgba(0, 173, 216, 0.05);
+}
+
+.main-content hr {
+  height: 2px;
+  background-color: #e3e3e3;
+  border: none;
+  margin: 2rem 0;
+}
+
+.main-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.main-content table th,
+.main-content table td {
+  padding: 0.75rem;
+  border: 1px solid #e3e3e3;
+}
+
+.main-content table th {
+  background-color: rgba(0, 173, 216, 0.1);
+  font-weight: 600;
+  text-align: left;
+}
+
+.main-content table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.main-content a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.main-content a:hover {
+  color: #0092B8;
+  text-decoration: underline;
+}
+
+.main-content ul li,
+.main-content ol li {
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn + .btn {
+  margin-left: 0.75rem;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  margin-top: 2rem;
+  border-top: solid 1px #e3e3e3;
+  font-size: 0.9rem;
+  color: #6a737d;
+}
+
+/* Add Go logo to the header */
+.go-logo {
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 64em) {
+  .project-name {
+    font-size: 2.25rem;
+  }
+  .project-tagline {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .project-name {
+    font-size: 1.75rem;
+  }
+  .project-tagline {
+    font-size: 1rem;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  .btn + .btn {
+    margin-top: 0.75rem;
+    margin-left: 0;
+  }
+}
