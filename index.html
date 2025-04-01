@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoEcosystem Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00ADD8; /* Go blue */
+            --secondary-color: #5DC9E2;
+            --dark-color: #0D1117;
+            --light-color: #F8F9FA;
+            --section-padding: 4rem 0;
+            --code-bg: #1F2937;
+            --code-color: #E5E7EB;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+        }
+        
+        /* Hero section with gradient */
+        .hero {
+            background: linear-gradient(135deg, #00ADD8 0%, #5DC9E2 100%);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIj48ZmlsdGVyIGlkPSJub2lzZSIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giIHJlc3VsdD0ibm9pc2UiLz48ZmVTcGVjdWxhckxpZ2h0aW5nIGluPSJub2lzZSIgc3VyZmFjZVNjYWxlPSIxMCIgc3BlY3VsYXJDb25zdGFudD0iMC4xIiBzcGVjdWxhckV4cG9uZW50PSIyMCIgbGlnaHRpbmdDb2xvcj0iI2ZmZmZmZiIgcmVzdWx0PSJzcGVjdWxhciIvPjxmZUNvbXBvc2l0ZSBpbj0ibm9pc2UiIGluMj0ic3BlY3VsYXIiIG9wZXJhdG9yPSJhcml0aG1ldGljIiBrMT0iMCIgazI9IjEiIGszPSIxIiBrND0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSJ0cmFuc3BhcmVudCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4xNSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .go-logo {
+            height: 80px;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 600;
+            margin-top: 0;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            margin: 0 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .btn i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Content sections */
+        .section {
+            padding: 4rem 0;
+        }
+        
+        .section:nth-child(even) {
+            background-color: #F0F5F9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            width: 50%;
+            height: 3px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        /* Card styles */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .card p {
+            margin-bottom: 1.5rem;
+            color: #4B5563;
+        }
+        
+        .card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .card a i {
+            margin-left: 0.5rem;
+            transition: transform 0.2s;
+        }
+        
+        .card a:hover i {
+            transform: translateX(4px);
+        }
+        
+        /* List styles */
+        .feature-list {
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-list li i {
+            color: var(--primary-color);
+            margin-right: 0.75rem;
+            margin-top: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: #B1BAC4;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 1rem 1rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-links a i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero {
+                padding: 4rem 0;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <svg class="go-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 254.5 225" width="120" fill="#ffffff">
+                <path d="M40.2 101.1c-.4 0-.5-.2-.3-.5l2.1-2.7c.2-.3.7-.5 1.1-.5h35.7c.4 0 .5.3.3.6l-1.7 2.6c-.2.3-.7.6-1 .6l-36.2-.1zM25.1 110.3c-.4 0-.5-.2-.3-.5l2.1-2.7c.2-.3.7-.5 1.1-.5h45.6c.4 0 .6.3.5.6l-.8 2.4c-.1.4-.5.6-.9.6l-47.3.1zM49.3 119.5c-.4 0-.5-.3-.3-.6l1.4-2.5c.2-.3.6-.6 1-.6h20c.4 0 .6.3.6.7l-.2 2.4c0 .4-.4.7-.7.7l-21.8-.1z"/>
+                <g>
+                    <path d="M153.1 99.3c-6.3 1.6-10.6 2.8-16.8 4.4-1.5.4-1.6.5-2.9-1-1.5-1.7-2.6-2.8-4.7-3.8-6.3-3.1-12.4-2.2-18.1 1.5-6.8 4.4-10.3 10.9-10.2 19 .1 8 5.6 14.6 13.5 15.7 6.8.9 12.5-1.5 17-6.6.9-1.1 1.7-2.3 2.7-3.7h-19.3c-2.1 0-2.6-1.3-1.9-3 1.3-3.1 3.7-8.3 5.1-10.9.3-.6 1-1.6 2.5-1.6h36.4c-.2 2.7-.2 5.4-.6 8.1-1.1 7.2-3.8 13.8-8.2 19.6-7.2 9.5-16.6 15.4-28.5 17-9.8 1.3-18.9-.6-26.9-6.6-7.4-5.6-11.6-13-12.7-22.2-1.3-10.9 1.9-20.7 8.5-29.3 7.1-9.3 16.5-15.2 28-17.3 9.4-1.7 18.4-.6 26.5 4.9 5.3 3.5 9.1 8.3 11.6 14.1.6.9.2 1.4-1 1.7z"/>
+                    <path d="M186.2 154.6c-9.1-.2-17.4-2.8-24.4-8.8-5.9-5.1-9.6-11.6-10.8-19.3-1.8-11.3 1.3-21.3 8.1-30.2 7.3-9.6 16.1-14.6 28-16.7 10.2-1.8 19.8-.8 28.5 5.1 7.9 5.4 12.8 12.7 14.1 22.3 1.7 13.5-2.2 24.5-11.5 33.9-6.6 6.7-14.7 10.9-24 12.8-2.7.5-5.4.6-8 .9zm23.8-40.4c-.1-1.3-.1-2.3-.3-3.3-1.8-9.9-10.9-15.5-20.4-13.3-9.3 2.1-15.3 8-17.5 17.4-1.8 7.8 2 15.7 9.2 18.9 5.5 2.4 11 2.1 16.3-.6 7.9-4.1 12.2-10.5 12.7-19.1z"/>
+                </g>
+            </svg>
+            <h1>GoEcosystem Documentation</h1>
+            <p class="lead">Organization-wide documentation and guidelines for GoEcosystem projects</p>
+            <div class="hero-buttons">
+                <a href="https://github.com/GoEcosystem/go-docs" class="btn">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <a href="https://goecosystem.github.io/go-web-scraper/" class="btn">
+                    <i class="fas fa-code"></i> Go Web Scraper
+                </a>
+                <a href="https://goecosystem.github.io/go-cheatsheets/" class="btn">
+                    <i class="fas fa-list-alt"></i> Go Cheatsheets
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Core Documentation Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Documentation</h2>
+                <p>Essential guides and standards for all GoEcosystem projects</p>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Contributing Guidelines</h3>
+                        <p>Learn how to contribute to GoEcosystem projects, including the workflow and process for submitting pull requests.</p>
+                        <a href="CONTRIBUTING.html">View Guidelines <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Code of Conduct</h3>
+                        <p>Community standards and expectations for all participants in the GoEcosystem community.</p>
+                        <a href="CODE_OF_CONDUCT.html">View Code of Conduct <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Style Guide</h3>
+                        <p>Coding standards and practices to maintain consistency across all GoEcosystem projects.</p>
+                        <a href="STYLE_GUIDE.html">View Style Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3>Architecture</h3>
+                        <p>Design principles and architectural patterns used in GoEcosystem projects.</p>
+                        <a href="ARCHITECTURE.html">View Architecture <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Development Guides Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Development Guides</h2>
+                <p>Specialized guides for various aspects of Go development</p>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>GitHub Pages Best Practices</h3>
+                        <p>Learn how to set up, configure, and deploy GitHub Pages for your Go projects using modern workflows.</p>
+                        <a href="pages/github_pages_best_practices.html">View Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Key projects within the GoEcosystem organization</p>
+            </div>
+            
+            <div class="cards">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <h3>Go Web Scraper</h3>
+                        <p>A comprehensive web scraping solution built in Go, featuring concurrent scraping, database integration, and a responsive web interface.</p>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-bolt"></i>
+                                <span>Multi-site concurrent scraping with rate limiting</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-database"></i>
+                                <span>SQLite database integration for persistent storage</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-file-export"></i>
+                                <span>Export to JSON and CSV formats</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://goecosystem.github.io/go-web-scraper/">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-icon">
+                            <i class="fas fa-list-alt"></i>
+                        </div>
+                        <h3>Go Cheatsheets</h3>
+                        <p>Quick reference guides for the Go programming language, covering basics to advanced topics.</p>
+                        
+                        <ul class="feature-list">
+                            <li>
+                                <i class="fas fa-code"></i>
+                                <span>Basic syntax and data structures</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-network-wired"></i>
+                                <span>Concurrency patterns and best practices</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-vial"></i>
+                                <span>Testing and tooling reference</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="https://goecosystem.github.io/go-cheatsheets/">View Cheatsheets <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://goecosystem.github.io/"><i class="fas fa-home"></i> GoEcosystem</a>
+                <a href="https://github.com/GoEcosystem"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://goecosystem.github.io/go-web-scraper/"><i class="fas fa-spider"></i> Go Web Scraper</a>
+                <a href="https://goecosystem.github.io/go-cheatsheets/"><i class="fas fa-list-alt"></i> Go Cheatsheets</a>
+            </div>
+            <p>Copyright &copy; 2025 GoEcosystem. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

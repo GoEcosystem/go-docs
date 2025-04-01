@@ -2,10 +2,31 @@ remote_theme: pages-themes/cayman@v0.2.0
 plugins:
   - jekyll-remote-theme
   - jekyll-relative-links
+  - jekyll-seo-tag
 
 title: GoEcosystem Documentation
 description: Organization-wide documentation and guidelines for GoEcosystem projects
 show_downloads: false
+go_logo_enabled: true
+show_hero: true
+
+# GitHub repository
+repository: GoEcosystem/go-docs
+
+# Navigation links
+nav_links:
+  - title: GoEcosystem Home
+    url: https://goecosystem.github.io/
+    icon: fa-home
+  - title: Go Web Scraper
+    url: https://goecosystem.github.io/go-web-scraper/
+    icon: fa-spider
+  - title: Go Cheatsheets
+    url: https://goecosystem.github.io/go-cheatsheets/
+    icon: fa-list-alt
+  - title: GitHub
+    url: https://github.com/GoEcosystem
+    icon: fa-github
 
 # Enable GitHub Pages to render Markdown files
 relative_links:
