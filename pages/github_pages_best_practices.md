@@ -39,13 +39,14 @@ GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScri
 
 ## Setting Up GitHub Pages
 
-### Basic Repository Configuration
+### GitHub Actions Deployment Method (Recommended)
+
+The recommended approach for deploying GitHub Pages sites is using GitHub Actions workflows, which offers more flexibility and control.
 
 1. Create a new repository or use an existing one
 2. Navigate to Settings > Pages
-3. Choose a source branch (main or gh-pages)
-4. Select a folder (/ (root) or /docs)
-5. Click Save
+3. Under "Build and deployment", select "GitHub Actions" as the source
+4. GitHub will suggest workflow templates, or you can create a custom one
 
 ### Jekyll Configuration
 
@@ -78,7 +79,7 @@ A typical structure for a GitHub Pages site with Jekyll:
 │   └── container.html
 ├── assets/
 │   └── css/
-│       └── style.scss
+│       └── styles.scss
 ├── _config.yml
 ├── Gemfile
 ├── README.md
@@ -87,14 +88,15 @@ A typical structure for a GitHub Pages site with Jekyll:
 
 ## GitHub Actions for Deployment
 
-Using GitHub Actions for deployment provides more flexibility and control over the build process. Create a `.github/workflows/pages.yml` file:
+Using GitHub Actions for deployment is the modern approach that provides more flexibility and control over the build process. Create a `.github/workflows/pages.yml` file:
 
 ```yaml
 name: GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -103,7 +105,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
+# Allow one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -115,15 +117,31 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
       - name: Setup Pages
+        id: pages
         uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '3.2'
+          bundler-cache: true
+      
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+      
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
 
   # Deployment job
   deploy:
@@ -135,7 +153,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3
+        uses: actions/deploy-pages@v4
 ```
 
 ## Theme Customization
@@ -143,15 +161,21 @@ jobs:
 ### Creating a Custom Theme
 
 1. Create a `_layouts/default.html` file to override the theme's default layout
-2. Create an `assets/css/style.scss` file for custom styling:
+2. Create an `assets/css/styles.scss` file for custom styling (note that Jekyll requires empty front matter at the top):
 
 ```scss
 ---
 ---
-
-@import "jekyll-theme-cayman";
+@charset "utf-8";
 
 // Your custom styles here
+$primary: #00ADD8;  // Example Go color
+$accent: #00FF41;   // Example accent color
+
+body {
+  font-family: 'Inter', sans-serif;
+  // More custom styles
+}
 ```
 
 ### Modifying Navigation
