@@ -66,7 +66,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
         <li><a href="https://goecosystem.github.io/go-docs/STYLE_GUIDE.html">Style Guide</a></li>
         <li><a href="https://goecosystem.github.io/go-docs/ARCHITECTURE.html">Architecture</a></li>
       </ul>
-      <a href="#core-docs" class="view-documentation">View Documentation</a>
+      <a href="https://goecosystem.github.io/go-docs/#core-docs" class="view-documentation">View Documentation</a>
     </div>
     
     <div class="documentation-card">
@@ -78,7 +78,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       <ul class="documentation-links">
         <li><a href="https://goecosystem.github.io/go-docs/pages/github_pages_best_practices.html">GitHub Pages Best Practices</a></li>
       </ul>
-      <a href="#development-guides" class="view-documentation">View Guides</a>
+      <a href="https://goecosystem.github.io/go-docs/#development-guides" class="view-documentation">View Guides</a>
     </div>
   </div>
 </div>
