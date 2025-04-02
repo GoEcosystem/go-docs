@@ -1,8 +1,6 @@
-remote_theme: pages-themes/minimal@v0.2.0
 plugins:
   - jekyll-relative-links
   - jekyll-seo-tag
-  - jekyll-remote-theme
 
 # Site configuration
 title: GoEcosystem Documentation
@@ -17,11 +15,11 @@ repository: GoEcosystem/go-docs
 
 # Theme colors
 theme_colors:
-  primary: "#00ADD8"    # Go blue
-  secondary: "#5DC9E2"  # Light blue
-  accent: "#00FF41"     # Matrix green
-  dark: "#0D1117"       # Near black
-  darker: "#070A0F"     # Darkest background
+  primary: "#00BCD4"    # Teal/Turquoise
+  secondary: "#80DEEA"  # Light Teal
+  accent: "#00838F"     # Dark Teal
+  dark: "#212121"       # Dark background
+  darker: "#121212"     # Darkest background
   code_bg: "#1A1E26"    # Dark code background
 
 # Navigation links
