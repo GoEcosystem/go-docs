@@ -652,6 +652,192 @@
           flex-wrap: wrap;
         }
       }
+      
+      /* Documentation Cards */
+      .documentation-section {
+        margin: 3rem 0;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        color: #00838F;
+      }
+      
+      .section-desc {
+        margin-bottom: 1.5rem;
+        color: #6c757d;
+      }
+      
+      .documentation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .documentation-card {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.75rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid #e9ecef;
+      }
+      
+      .documentation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      .documentation-icon {
+        width: 60px;
+        height: 60px;
+        background-color: #E0F7FA;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+      }
+      
+      .documentation-icon i {
+        font-size: 1.5rem;
+        color: #00BCD4;
+      }
+      
+      .documentation-title {
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        color: #00838F;
+      }
+      
+      .documentation-desc {
+        margin-bottom: 1.25rem;
+        color: #6c757d;
+      }
+      
+      .documentation-links {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+      }
+      
+      .documentation-links li {
+        margin-bottom: 0.5rem;
+      }
+      
+      .documentation-links a {
+        color: #00ACC1;
+        text-decoration: none;
+        font-size: 0.9375rem;
+        transition: color 0.2s ease;
+      }
+      
+      .documentation-links a:hover {
+        color: #007E8A;
+        text-decoration: underline;
+      }
+      
+      .view-documentation {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #E0F7FA;
+        color: #00838F;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+      }
+      
+      .view-documentation:hover {
+        background-color: #B2EBF2;
+        text-decoration: none;
+      }
+      
+      /* Projects Section */
+      .projects-section {
+        margin: 3rem 0;
+      }
+      
+      .projects-categories {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .project-category {
+        margin-bottom: 1.5rem;
+      }
+      
+      .category-title {
+        font-size: 1.375rem;
+        margin-bottom: 1.25rem;
+        color: #00838F;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #E0F7FA;
+      }
+      
+      .project-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.25rem;
+      }
+      
+      .project-item {
+        background-color: white;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border: 1px solid #e9ecef;
+      }
+      
+      .project-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      .project-item.featured {
+        border-left: 4px solid #00BCD4;
+      }
+      
+      .project-title {
+        font-size: 1.125rem;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        color: #00838F;
+      }
+      
+      .project-desc {
+        margin-bottom: 1rem;
+        color: #6c757d;
+        font-size: 0.9375rem;
+      }
+      
+      .project-link {
+        display: inline-block;
+        color: #00BCD4;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 500;
+      }
+      
+      .project-link:hover {
+        text-decoration: underline;
+      }
+      
+      /* Responsive Adjustments for New Components */
+      @media (max-width: 768px) {
+        .documentation-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .project-list {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
