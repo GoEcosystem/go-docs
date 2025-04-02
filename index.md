@@ -61,10 +61,10 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       <h3 class="documentation-title">Core Documentation</h3>
       <p class="documentation-desc">Essential documentation covering contribution guidelines, code of conduct, and style guide.</p>
       <ul class="documentation-links">
-        <li><a href="CONTRIBUTING.html">Contributing Guidelines</a></li>
-        <li><a href="CODE_OF_CONDUCT.html">Code of Conduct</a></li>
-        <li><a href="STYLE_GUIDE.html">Style Guide</a></li>
-        <li><a href="ARCHITECTURE.html">Architecture</a></li>
+        <li><a href="https://goecosystem.github.io/go-docs/CONTRIBUTING.html">Contributing Guidelines</a></li>
+        <li><a href="https://goecosystem.github.io/go-docs/CODE_OF_CONDUCT.html">Code of Conduct</a></li>
+        <li><a href="https://goecosystem.github.io/go-docs/STYLE_GUIDE.html">Style Guide</a></li>
+        <li><a href="https://goecosystem.github.io/go-docs/ARCHITECTURE.html">Architecture</a></li>
       </ul>
       <a href="#core-docs" class="view-documentation">View Documentation</a>
     </div>
@@ -76,7 +76,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       <h3 class="documentation-title">Development Guides</h3>
       <p class="documentation-desc">Comprehensive guides for setting up and deploying Go projects with modern workflows.</p>
       <ul class="documentation-links">
-        <li><a href="pages/github_pages_best_practices.html">GitHub Pages Best Practices</a></li>
+        <li><a href="https://goecosystem.github.io/go-docs/pages/github_pages_best_practices.html">GitHub Pages Best Practices</a></li>
       </ul>
       <a href="#development-guides" class="view-documentation">View Guides</a>
     </div>
@@ -87,7 +87,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
 <div class="cheatsheets">
   <div class="cheatsheets-header">
     <h2 class="cheatsheets-title">Go Cheatsheets</h2>
-    <a href="/cheatsheets/" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+    <a href="https://goecosystem.github.io/go-cheatsheets/" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
   </div>
   
   <div class="cheatsheets-grid">
@@ -105,7 +105,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       </div>
       <div class="cheatsheet-footer">
         <span class="language-label"><span class="language-dot"></span> Go 1.24.1</span>
-        <a href="/cheatsheets/syntax-basics.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
+        <a href="https://goecosystem.github.io/go-cheatsheets/syntax-basics.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
     
@@ -123,7 +123,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       </div>
       <div class="cheatsheet-footer">
         <span class="language-label"><span class="language-dot"></span> Go 1.24.1</span>
-        <a href="/cheatsheets/concurrency.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
+        <a href="https://goecosystem.github.io/go-cheatsheets/concurrency.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
     
@@ -141,7 +141,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
       </div>
       <div class="cheatsheet-footer">
         <span class="language-label"><span class="language-dot"></span> Go 1.24.1</span>
-        <a href="/cheatsheets/stdlib.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
+        <a href="https://goecosystem.github.io/go-cheatsheets/stdlib.html" class="download-link">View <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -179,7 +179,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
         <div class="project-item featured">
           <h4 class="project-title">Go Web Scraper</h4>
           <p class="project-desc">Comprehensive web scraper with database integration and web interface.</p>
-          <a href="projects/web-scraper.html" class="project-link">View Documentation →</a>
+          <a href="https://goecosystem.github.io/go-web-scraper/" class="project-link">View Documentation →</a>
         </div>
       </div>
     </div>
@@ -212,7 +212,7 @@ description: Organization-wide documentation and guidelines for GoEcosystem proj
   <h2 class="cta-title">Ready to Start Building?</h2>
   <p class="cta-text">Explore our comprehensive documentation, examples, and resources to help you build amazing Go applications.</p>
   <div class="cta-buttons">
-    <a href="/docs/getting-started/" class="btn primary-btn">
+    <a href="https://goecosystem.github.io/go-docs/" class="btn primary-btn">
       <i class="fas fa-book"></i> Read the Docs
     </a>
     <a href="https://github.com/goecosystem" class="btn secondary-btn">
@@ -231,25 +231,25 @@ Welcome to the GoEcosystem documentation hub. This site contains comprehensive d
 
 ### Contributing Guidelines
 Learn how to contribute to GoEcosystem projects, including the workflow and process for submitting pull requests.
-[View Guidelines →](CONTRIBUTING.html)
+[View Guidelines →](https://goecosystem.github.io/go-docs/CONTRIBUTING.html)
 
 ### Code of Conduct
 Community standards and expectations for all participants in the GoEcosystem community.
-[View Code of Conduct →](CODE_OF_CONDUCT.html)
+[View Code of Conduct →](https://goecosystem.github.io/go-docs/CODE_OF_CONDUCT.html)
 
 ### Style Guide
 Coding standards and practices to maintain consistency across all GoEcosystem projects.
-[View Style Guide →](STYLE_GUIDE.html)
+[View Style Guide →](https://goecosystem.github.io/go-docs/STYLE_GUIDE.html)
 
 ### Architecture
 Design principles and architectural patterns used in GoEcosystem projects.
-[View Architecture →](ARCHITECTURE.html)
+[View Architecture →](https://goecosystem.github.io/go-docs/ARCHITECTURE.html)
 
 ## Development Guides
 
 ### GitHub Pages Best Practices
 Learn how to set up, configure, and deploy GitHub Pages for your Go projects using modern workflows, including latest GitHub Actions v4 for deployment.
-[View Guide →](pages/github_pages_best_practices.html)
+[View Guide →](https://goecosystem.github.io/go-docs/pages/github_pages_best_practices.html)
 
 ## Projects
 
@@ -270,11 +270,11 @@ Web application template using Go, Fiber, and PostgreSQL.
 
 #### Go Web Scraper
 Comprehensive web scraper with database integration and web interface.
-[View Documentation →](projects/web-scraper.html)
+[View Documentation →](https://goecosystem.github.io/go-web-scraper/)
 
 ### Documentation & Learning
 
 #### Go Cheatsheets
 Quick reference guides for Go programming.
-[View Cheatsheets →](cheatsheets/)
+[View Cheatsheets →](https://goecosystem.github.io/go-cheatsheets/)
 </div>
